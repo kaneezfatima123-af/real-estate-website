@@ -25,3 +25,5 @@ const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
     console.log('Server chal raha hai port 5000 pe')
 })
+
+module.exports = app
