@@ -13,7 +13,7 @@ function PropertyDetail() {
     const [sending, setSending] = useState(false)
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/properties/${id}`)
+        axios.get(`https://real-estate-website-alpha-three.vercel.app/api/properties/${id}`)
             .then(res => {
                 setProperty(res.data)
                 setLoading(false)
@@ -33,7 +33,7 @@ function PropertyDetail() {
 
         setSending(true)
         try {
-            await axios.post("http://localhost:5000/api/contact", {
+            await axios.post("https://real-estate-website-alpha-three.vercel.app/api/contact", {
                 name,
                 phone,
                 message: `Property: ${property.title}\n\n${message}`,

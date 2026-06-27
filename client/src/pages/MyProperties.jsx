@@ -15,7 +15,7 @@ function MyProperties() {
             return
         }
 
-        axios.get("http://localhost:5000/api/properties/my", {
+        axios.get("https://real-estate-website-alpha-three.vercel.app/api/properties/my", {
             headers: { Authorization: `Bearer ${token}` }
         })
             .then(res => {
@@ -42,7 +42,7 @@ function MyProperties() {
 
         const token = localStorage.getItem("token")
         try {
-            await axios.delete(`http://localhost:5000/api/properties/${id}`, {
+            await axios.delete(`https://real-estate-website-alpha-three.vercel.app/api/properties/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             })
             setProperties(properties.filter(p => p._id !== id))

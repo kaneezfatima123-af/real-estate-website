@@ -19,7 +19,7 @@ function Contact() {
 
         setLoading(true)
         try {
-            await axios.post("http://localhost:5000/api/contact", { name, email, phone, message })
+            await axios.post("https://real-estate-website-alpha-three.vercel.app/api/contact", { name, email, phone, message })
             alert("Message sent! We will contact you soon.")
             setName("")
             setEmail("")

@@ -100,7 +100,7 @@ function AddProperty() {
         }
       }
 
-      await axios.post("http://localhost:5000/api/properties/add", {
+      await axios.post("https://real-estate-website-alpha-three.vercel.app/api/properties/add", {
         title, price, location, beds, baths, area, type, description,
         images: uploadedImages,
         isFeatured: isFeatured

@@ -11,7 +11,7 @@ function Properties() {
     const [filterBeds, setFilterBeds] = useState("")
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/properties")
+        axios.get("https://real-estate-website-alpha-three.vercel.app/api/properties")
             .then(res => {
                 setProperties(res.data)
                 setLoading(false)

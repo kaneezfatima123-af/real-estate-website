@@ -14,7 +14,7 @@ function Home() {
     const propertiesRef = useRef(null)
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/properties")
+        axios.get("https://real-estate-website-alpha-three.vercel.app/api/properties")
             .then(res => {
                 setUserProperties(res.data)
                 setLoading(false)
