@@ -6,7 +6,9 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const app = express()
-app.use(cors())
+app.use(cors({
+  origin: "https://real-estate-websit.netlify.app"
+}))
 app.use(express.json())
 
 mongoose.connect(process.env.MONGO_URI)
